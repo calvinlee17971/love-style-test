@@ -208,6 +208,13 @@
   border: 1px solid rgba(34, 28, 24, 0.08);
 }
 
+.result-summary {
+  margin: 14px 0 8px;
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
 .result-emoji {
   margin: 0;
   font-size: 2.2rem;
@@ -236,6 +243,68 @@
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
+}
+
+.result-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.detail-card {
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(34, 28, 24, 0.08);
+}
+
+.detail-card h3 {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: 1.1rem;
+}
+
+.detail-card p,
+.detail-card li {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.detail-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.detail-card li + li {
+  margin-top: 8px;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.match-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.match-chip.good {
+  background: rgba(57, 142, 84, 0.14);
+  color: #2f7b49;
+}
+
+.match-chip.bad {
+  background: rgba(181, 63, 63, 0.12);
+  color: #aa4747;
 }
 
 .result-actions {
@@ -272,6 +341,10 @@
   .question-stage {
     padding: 20px 16px;
     border-radius: 22px;
+  }
+
+  .result-detail-grid {
+    grid-template-columns: 1fr;
   }
 
   .answer-button {
